@@ -1,27 +1,26 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  /* Create two equal columns that floats next to each other */
-  .menu {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    height: 100vh;; /* Should be removed. Only for demonstration */
-    background: radial-gradient(#eceff1, #bce9f6);
-  }
-  .canvas {
-    float: left;
-    width: 80%;
-    padding: 10px;
-    /* background: linear-gradient(#f2f4f5, #dbf0fa); */
-    height: 100vh; /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.menu {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100vh; /* Should be removed. Only for demonstration */
+  background: radial-gradient(#eceff1, #bce9f6);
+}
+.canvas {
+  float: left;
+  width: 80%;
+  padding: 10px;
+  /* background: linear-gradient(#f2f4f5, #dbf0fa); */
+  height: 100vh; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
