@@ -1,5 +1,7 @@
 import React from 'react';
-import data from './data';
+import CONSTANTS from './../../constants';
+
+const { GRAPH_PARAMS: data } = CONSTANTS;
 
 class DropList extends React.Component {
   constructor (props) {
@@ -8,7 +10,6 @@ class DropList extends React.Component {
       value: props.data[0],
       columns: props.data,
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }

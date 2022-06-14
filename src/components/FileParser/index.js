@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
 import DropList from './DropList';
-import data from './data';
-
+import CONSTANTS from './../../constants';
 import Plot from 'react-plotly.js';
-import './FileParser.css';
+import styles from './FileParser.module.css';
+
+const { GRAPH_PARAMS: data } = CONSTANTS;
 
 // Allowed extensions for input file
 const allowedExtensions = ['csv'];
@@ -188,8 +189,8 @@ const FileParser = () => {
   };
 
   return (
-    <div className='row'>
-      <div className='menu'>
+    <div className={styles.row}>
+      <div className={styles.menu}>
         <label htmlFor='csvInput' style={{ display: 'block' }}>
           Enter CSV File
         </label>
@@ -213,7 +214,7 @@ const FileParser = () => {
           </p>
         </div>
       </div>
-      <div className='canvas'>{chart}</div>
+      <div className={styles.canvas}>{chart}</div>
     </div>
   );
 };
