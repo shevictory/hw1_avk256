@@ -1,5 +1,5 @@
 const CONSTANTS = {
-  GRAPH_PARAMS: {
+  INITIAL_GRAPH_PARAMS: {
     xName: '',
     yName: '',
     color: '',

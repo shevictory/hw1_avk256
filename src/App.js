@@ -1,10 +1,8 @@
 import './App.css';
-import React from 'react';
-import FileParser from './components/FileParser';
+import GraphContainer from './components/GraphContainer';
 
-class App extends React.Component {
-  render () {
-    return <FileParser />;
-  }
+function App () {
+  return <GraphContainer />;
 }
+
 export default App;
