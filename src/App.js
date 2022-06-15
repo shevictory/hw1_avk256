@@ -1,8 +1,7 @@
-import './App.css';
-import GraphContainer from './components/GraphContainer';
+import ChartContainer from './components/ChartContainer';
 
 function App () {
-  return <GraphContainer />;
+  return <ChartContainer />;
 }
 
 export default App;

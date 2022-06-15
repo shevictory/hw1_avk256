@@ -1,31 +1,31 @@
 import React from 'react';
 import DropList from './DropList';
 
-function GraphControls ({
-  graphOptList,
-  graphOpt: { plotType, xName, yName, color },
-  setGraphOpt: { setPlotType, setXName, setYName, setColor },
+function ChartControls ({
+  chartAxisOptList,
+  chartTypeOptList,
+  chartOpt: { plotType, xName, yName, color },
+  setChartOpt: { setPlotType, setXName, setYName, setColor },
 }) {
-  // console.log('graphOpt', graphOpt);
   return (
     <div>
-      {graphOptList.length && (
+      {chartAxisOptList.length && (
         <>
           <DropList
             name='X-Axis type'
-            optionsList={graphOptList}
+            optionsList={chartAxisOptList}
             value={xName}
             setValue={setXName}
           />
           <DropList
             name='Y-Axis type'
-            optionsList={graphOptList}
+            optionsList={chartAxisOptList}
             value={yName}
             setValue={setYName}
           />
           <DropList
             name='Chart type'
-            optionsList={['bar', 'lines', 'scatter', 'pie']}
+            optionsList={chartTypeOptList}
             value={plotType}
             setValue={setPlotType}
           />
@@ -35,4 +35,4 @@ function GraphControls ({
   );
 }
 
-export default GraphControls;
+export default ChartControls;

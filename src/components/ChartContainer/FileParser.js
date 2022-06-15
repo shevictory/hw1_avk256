@@ -4,8 +4,7 @@ import { useState } from 'react';
 const allowedExtensions = ['csv'];
 
 function FileParser ({ setError, setFile }) {
-  // This function will be called when
-  // the file input changes
+  // This function will be called when the file input changes
   const handleFileChange = e => {
     setError('');
 
@@ -13,21 +12,15 @@ function FileParser ({ setError, setFile }) {
     if (e.target.files.length) {
       const inputFile = e.target.files[0];
 
-      // Check the file extensions, if it not
-      // included in the allowed extensions
-      // we show the error
+      // Check the file extensions, if it not included in the allowed extensions we show the error
       const fileExtension = inputFile?.type.split('/')[1];
       if (!allowedExtensions.includes(fileExtension)) {
         return setError('Please input a csv file');
       }
 
-      // If input type is correct set the state
-      // console.log('inputFile', inputFile);
+      // If input type is correct set the state console.log('inputFile', inputFile);
       setFile(inputFile);
     }
-    // processing = <div>File loaded. Processing... </div>;
-    // alert("Click 'Parse CSV' to continue");
-    // handleParse();
   };
 
   return (
@@ -39,13 +32,8 @@ function FileParser ({ setError, setFile }) {
         onChange={handleFileChange}
         id='csvInput'
         name='file'
-        type='File'
+        type='file'
       />
-      {/* <div>
-        <p>
-          <button onClick={handleParse}>Parse CSV</button>
-        </p>
-      </div> */}
     </>
   );
 }
